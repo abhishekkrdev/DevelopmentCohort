@@ -15,13 +15,13 @@
 //account details ~ npx wrangler whoami
 
 export default {
-	async fetch(request, env, ctx): Promise<Response> {
+	async fetch(request: any, env: any, ctx: any): Promise<Response> {
 		// return new Response('Hello World bittu!');
 		return Response.json({
-			message: "hey bittu, this has been deployed"
+			message: 'hey bittu, this has been deployed',
 		});
 	},
-} satisfies ExportedHandler<Env>;
+};
 
 //routing in Cloudflare environment (the ugly way ~ without any libraries/frameworks)
 // export default {
