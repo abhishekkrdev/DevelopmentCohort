@@ -1,6 +1,6 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
 
-const app = new Hono()
+const app = new Hono();
 
 // app.get('/', (c) => {
 //   console.log(c); console.log(' ');
@@ -13,13 +13,13 @@ const app = new Hono()
 // })
 
 //Getting inputs from user
-app.get('/', async (c) => {
-  const body = await c.req.json()
-  console.log('body : ', body);
-  console.log('Authorization header : ', c.req.header("Authorization"));
-  console.log('Query parameter : ', c.req.query("param"));
+app.get("/", async (c) => {
+    const body = await c.req.json();
+    console.log("body : ", body);
+    console.log("Authorization header : ", c.req.header("Authorization"));
+    console.log("Query parameter : ", c.req.query("param"));
 
-  return c.text('Hello Hono!')
-})
+    return c.text("Hello Hono!");
+});
 
-export default app
+export default app;
